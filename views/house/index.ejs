@@ -27,10 +27,14 @@
             <li>
                 Name:
                 <a href="/houses/<%= houses[i].id %>">
-                    <%= houses[i].name %>
-                </a>
+                    <%= houses[i].name %></a>
+                <a href="/houses/<%=houses[i].id %>/edit">(Edit)</a>
+                <form action="/houses/<%= houses[i].id %>/?_method=DELETE" method="post">
+                    <input type="submit" value="Delete House">
+                </form>
+            <br>
             </li>
-            <form action="/houses/<%= houses[i].id %>/?_method=DELETE" method="post"><input type="submit" value="Delete House"></form>
+            
             <%  }  %>
     </main>
 

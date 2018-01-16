@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit <%=house.name %></title>
+</head>
+<body>
+	<header>
+		<h1>Edit <%=house.name %></h1>
+		<nav>
+		<ul>
+			<li>
+				<a href="/">Back to Hogwarts Express</a>
+			</li>
+			<li>
+				<a href="/houses">House List</a>
+			</li>
+		</ul>
+	</nav>
+	</header>
+
+	<main>
+      <form action="/houses/<%=house.id %>/?_method=PUT" method="POST">
+          Name: <input type="text" name="name" value="<%=house.name %>">
+          <input type="submit" value="Update House">
+      </form>
+  </main>
+
+</body>
+</html>
